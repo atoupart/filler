@@ -26,7 +26,7 @@ FILES	= filler.c\
 		orientation_piece.c\
 		search.c\
 		parcour_point.c\
-		diagonal_point.c
+		determine_y1_x1.c
 
 LIB = ./libft/libft.a
 # LIB		= -L libft -lft

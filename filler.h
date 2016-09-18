@@ -31,9 +31,12 @@ typedef	struct 		s_struct
 	char			l_player;			// lettre du joueur
 	char			l_opponent;			//	lettre 1 de l'adversaire
 	char			l_opponent2;			//	lettre 2 de l'adversaire
-
 	char			**plateau;			// tableau double entree qui stocke le plateau
 	char			**piece;			// tbleau double entree qui stocke la piece 
+	int				xinit;
+	int				yinit;
+	int				yrim;
+	int				xrim;
 	int				y;					//ordonné max plateau
 	int				x;					//abscisse max plateau
 	int				yp;					//ordonne total piece
@@ -46,7 +49,6 @@ typedef	struct 		s_struct
 	int				x2;				//abscisse point opponent plateau
 	int    			ap;				//abscisse point piece mouvant  general
 	int    			app;				//abscisse point piece mouvant dans search point 
-
 	int 			op;				//ordonne point piece mouvant dans search point
 	int    			ap2;			//abscisse point piece mouvant dans la verif de piece
 	int 			op2;			//ordonne point piece mouveant dans la verif de piece
@@ -62,26 +64,17 @@ typedef	struct 		s_struct
 	int				height;			//hauteur de la piece reel
 	int				diff;			//determine la difference entre l'absiesse de chaque ligne
 	int				ecart;			//determine lecart entre l'abscisse de chaque ligne de search point
-
-	int diff_h;						// difference hauteur orientation piece
-	int diff_l;						// difference largeur orientation piece
+	int 			diff_h;						// difference hauteur orientation piece
+	int 			diff_l;						// difference largeur orientation piece
 	int				i;				// index utile
 	int				j;				// index utile	
 	int 			result;			//pour find 1
 	int 			result2;		//pour find 2
 	int 			res_o;		//pour opponent
 	int 			res_p;		//pour player
-
-
 	int 			res_orient;		//pour orientation piece 1
 	int 			res_orient2;		//pour orientation piece 2
-
-	int				ver;
-	int				nb_touch_opponent;
-	int				nb_test_around;
-	int				nb_parcour_point_hg;
-	int				nb_parcour_point_bd;
-	int				nb_parcour_point_hd;
+	int				rim;
 
 }					t_struct;
 
@@ -89,8 +82,8 @@ typedef	struct 		s_struct
 **				filler.c
 */
 
+void				make_filler(t_struct *s, char *str, int k, int i);
 int					main();
-
 
 /*
 **				init_and_determine.c
@@ -99,6 +92,16 @@ int					main();
 void				init_player_plateau(t_struct *s, char *str);
 void				determine_plateau(t_struct *s, char *str);
 void				determine_piece(t_struct *s, char *str);
+
+/*
+**				determine_y1_x1.c
+*/
+
+void				determine_rim(t_struct *s, int i);
+void				follow_rim(t_struct *s);
+int					verif_rim(t_struct *s);
+void				determine_y1_x1(t_struct *s, int k, int i);
+
 
 /*
 **				recursive_point.c
@@ -153,7 +156,6 @@ int					find_point_opponent_hg(t_struct *s);
 int					look_around(t_struct *s, int y1, int x1);
 int					touch_around(t_struct *s, int y1, int x1);
 
-
 /*
 **				orientate_piece.c
 */
@@ -161,7 +163,6 @@ int					touch_around(t_struct *s, int y1, int x1);
 int					calcul2(int y1, int x1, int y2, int x2);
 int					find_opdown(t_struct *s);
 int 				find_apleft(t_struct *s);
-// int					find_apright(t_struct *s);
 void				orientate_piece(t_struct *s);
 
 /*
@@ -188,9 +189,5 @@ int 				touch_opponent(t_struct *s);
 int				find_direction(t_struct *s, int l);
 void			indicate_direction(t_struct *s, int l, int k);
 void			indicate_direction2(t_struct *s, int l, int k);
-
-
-
-
 
 #endif

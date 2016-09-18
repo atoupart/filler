@@ -14,31 +14,13 @@
 
 void		print_piece(t_struct *s)
 {
-	if (s->ver == 0)
-		fprintf(stderr, "\033[92mver  = 0 Print depuis search basique\n");
-	else if (s->ver == 1)
-		fprintf(stderr, "\033[92mver  = 1 Print depuis touch_opponent\n");
-	else if (s->ver == 2)
-		fprintf(stderr, "\033[92mver  = 2 Print depuis test_around\n");	
-	else if (s->ver == 3)
-		fprintf(stderr, "\033[96#############################################mver  = 3 Print depuis parcour_point_hg\n");
-	else if (s->ver == 4)
-		fprintf(stderr, "\033[91m############################################ver  = 4 Print depuis parcour_point_bd\n");
-	// else if (s->ver == 5)
-	// 	fprintf(stderr, "\033[92mver  = 5 Print depuis parcour_point_hd\n");
-
-
-	fprintf(stderr, "\033[92m===>Y1 = %d\n", s->y1);
-	fprintf(stderr, "\033[92m===>X1 = %d\n", s->x1);
-
-
 	ft_putnbr(s->y1);
 	ft_putchar(' ');
 	ft_putnbr(s->x1);
 	ft_putchar('\n');
 }
 
-int height_piece(t_struct *s)
+int			height_piece(t_struct *s)
 {
 	int i;
 	int j;
@@ -61,10 +43,10 @@ int height_piece(t_struct *s)
 	return (0);
 }
 
-int	nb_star_line(t_struct *s, int py)
+int			nb_star_line(t_struct *s, int py)
 {
-	int i;
-	int nb;
+	int		i;
+	int		nb;
 
 	i = 0;
 	nb = 0;
@@ -77,7 +59,7 @@ int	nb_star_line(t_struct *s, int py)
 	return (nb);
 }
 
-int		find_first_star(t_struct *s, int opj)
+int			find_first_star(t_struct *s, int opj)
 {
 	while (opj < s->yp)
 	{
@@ -93,7 +75,7 @@ int		find_first_star(t_struct *s, int opj)
 	return (0);
 }
 
-int		find_last_star(t_struct *s, int opj)
+int			find_last_star(t_struct *s, int opj)
 {
 	while (opj >= 0)
 	{
