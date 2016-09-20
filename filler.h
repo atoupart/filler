@@ -83,15 +83,15 @@ void				ft_putstr_color(char *str);
 **				filler.c
 */
 
-void				make_filler(t_struct *s, char *str, int k, int i);
-int					main();
+void				make_filler(t_struct *s, int k, int i);
+int					main(void);
 
 /*
 **				init_and_determine.c
 */
 
-void				init_player_plateau(t_struct *s, char *str);
-void				determine_plateau(t_struct *s, char *str);
+void				init_player_plateau(t_struct *s);
+void				determine_plateau(t_struct *s);
 void				determine_piece(t_struct *s, char *str);
 
 /*
