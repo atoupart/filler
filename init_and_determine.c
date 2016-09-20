@@ -30,9 +30,9 @@ void		init_player(t_struct *s)
 
 void		init_player_plateau(t_struct *s)
 {
-	char *str;
+	char	*str;
 	int		i;
-	char *tmp;
+	char	*tmp;
 
 	i = 0;
 	get_next_line(0, &str);
@@ -87,6 +87,7 @@ void		determine_plateau(t_struct *s)
 void		determine_piece(t_struct *s, char *str)
 {
 	char *tmp;
+	
 	get_next_line(0, &str);
 	tmp = str;
 	while (!(ft_isdigit(*str)))

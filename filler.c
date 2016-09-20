@@ -12,12 +12,6 @@
 
 #include "filler.h"
 
-
-// void			free_all(t_struct *s)
-// {
-	
-// }
-
 void			make_filler(t_struct *s, int k, int i)
 {
 	char *str;
@@ -61,7 +55,6 @@ int				main(void)
 			ft_strdel(&str);
 		}
 		make_filler(&s, k, i);
-		free_all(&s);
 	}
 	return (0);
 }
