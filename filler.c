@@ -18,8 +18,10 @@ void			make_filler(t_struct *s, char *str, int k, int i)
 	determine_piece(s, str);
 	determine_y1_x1(s, k, i);
 	if (search(s, s->y1, s->x1) == 0)
+	{
 		if (parcour(s, k) == 0)
 			print_piece(s);
+	}
 }
 
 int				main(void)

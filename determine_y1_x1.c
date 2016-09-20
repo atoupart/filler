@@ -12,9 +12,9 @@
 
 #include "filler.h"
 
-void		determine_rim(t_struct *s, int i)
+void		determine_rim(t_struct *s)
 {
-	find_point_player_bg(s);
+	find_point_player_hg(s);
 	s->xinit = s->x1;
 	s->yinit = s->y1;
 	if (s->y1 > s->y - s->y1)
@@ -76,7 +76,7 @@ int			verif_rim(t_struct *s)
 void		determine_y1_x1(t_struct *s, int k, int i)
 {
 	if (i == 0)
-		determine_rim(s, i);
+		determine_rim(s);
 	s->rim = verif_rim(s);
 	if (s->rim == 0 && k < 0)
 	{

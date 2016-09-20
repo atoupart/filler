@@ -12,40 +12,44 @@
 
 #include "filler.h"
 
+int			inside_search_position(t_struct *s, int y1, int x1)
+{
+	while (s->piece[s->py + s->j][s->app + s->i] != '*')
+		s->i++;
+	if (verif_piece_posable(s, y1, x1) == 1)
+	{
+		s->y1 = y1 - (s->py + s->j);
+		s->x1 = x1 - (s->app + s->i);
+		return (1);
+	}
+	else
+		s->i++;
+	return (0);
+}
+
 int			search_position(t_struct *s, int y1, int x1)
 {
-	int		py;
-	int		px;
 	int		nb;
 	int		nb_star;
 
 	s->j = 0;
 	s->height = height_piece(s);
-	py = find_first_star(s, 0);
-	px = s->ap;
-	while (py + s->j < s->height)
+	s->py = find_first_star(s, 0);
+	s->px = s->ap;
+	while (s->py + s->j < s->height)
 	{
-		find_first_star(s, py + s->j);
-		nb_star = nb_star_line(s, py + s->j);
+		find_first_star(s, s->py + s->j);
+		nb_star = nb_star_line(s, s->py + s->j);
 		s->app = s->ap;
 		nb = 0;
 		s->i = 0;
-		s->ecart = s->app - px;
+		s->ecart = s->app - s->px;
 		while (nb < nb_star)
 		{
-			while (s->piece[py + s->j][s->app + s->i] != '*')
-				s->i++;
-			if (verif_piece_posable(s, y1, x1) == 1)
-			{
-				s->y1 = y1 - (py + s->j);
-				s->x1 = x1 - (s->app + s->i);
+			if (inside_search_position(s, y1, x1))
 				return (1);
-			}
 			else
-			{
 				nb++;
-				s->i++;
-			}
 		}
 		s->j++;
 	}
@@ -74,44 +78,44 @@ int			verif_piece_posable(t_struct *s, int y1, int x1)
 	return (1);
 }
 
+int			inside_verif_ligne_piece(t_struct *s, int y1, int x1)
+{
+	s->xx = x1 + s->ii + s->diff - s->i - s->ecart;
+	s->ppx = s->ap + s->ii;
+	if (s->yy < 0 || s->xx < 0 || !s->plateau[s->yy][s->xx] ||\
+		!s->piece[s->ppy][s->ppx])
+		return (0);
+	while (s->piece[s->ppy][s->ppx] != '*')
+	{
+		s->ii++;
+		s->xx = x1 + s->ii + s->diff - s->i - s->ecart;
+		s->ppx = s->ap + s->ii;
+	}
+	if (s->yy == y1 && s->xx == x1 && s->piece[s->ppy][s->ppx] == '*')
+	{
+		s->ok_star = 1;
+		s->ii++;
+	}
+	else if (s->piece[s->ppy][s->ppx] == '*' && s->plateau[s->yy][s->xx] == '.')
+		s->ii++;
+	else
+		return (0);
+	return (1);
+}
+
 int			verif_line_piece(t_struct *s, int j, int y1, int x1)
 {
 	int		nb_star;
 	int		nb;
-	int		i;
-	int		x;
-	int		y;
-	int		px;
-	int		py;
 
 	nb_star = nb_star_line(s, s->op + j);
 	nb = 0;
-	i = 0;
-	y = y1 + j - s->j;
-	py = s->op + j;
+	s->ii = 0;
+	s->yy = y1 + j - s->j;
+	s->ppy = s->op + j;
 	while (nb < nb_star)
 	{
-		x = x1 + i + s->diff - s->i - s->ecart;
-		px = s->ap + i;
-		if (y < 0 || x < 0 || !s->plateau[y][x] || !s->piece[py][px])
-		{
-			s->ok_star = 0;
-			return (0);
-		}
-		while (s->piece[py][px] != '*')
-		{
-			i++;
-			x = x1 + i + s->diff - s->i - s->ecart;
-			px = s->ap + i;
-		}
-		if (y == y1 && x == x1 && s->piece[py][px] == '*')
-		{
-			s->ok_star = 1;
-			i++;
-		}
-		else if (s->piece[py][px] == '*' && s->plateau[y][x] == '.')
-			i++;
-		else
+		if (!inside_verif_ligne_piece(s, y1, x1))
 		{
 			s->ok_star = 0;
 			return (0);

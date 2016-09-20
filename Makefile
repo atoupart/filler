@@ -17,7 +17,6 @@ RM		= /bin/rm -rf
 CFLAGS	= -Wall -Wextra -Werror #-g3 -fsanitize=address
 
 FILES	= filler.c\
-		init_and_determine.c\
 		recursive_point.c\
 		search_position.c\
 		search_position2.c\
@@ -26,7 +25,12 @@ FILES	= filler.c\
 		orientation_piece.c\
 		search.c\
 		parcour_point.c\
+		tool_parcour_search.c\
 		determine_y1_x1.c
+
+COLOR = color_filler.c
+		
+NORMAL = init_and_determine.c
 
 LIB = ./libft/libft.a
 # LIB		= -L libft -lft
@@ -35,8 +39,11 @@ all:	$(NAME)
 	@printf "Program is compiled.\n"
 $(NAME):
 	# @make -C libft
-	@gcc -g $(CFLAGS) $(FILES)  $(LIB) -o $(NAME) 
+	@gcc -g $(CFLAGS) $(FILES) $(NORMAL) $(LIB) -o $(NAME) 
 	
+color: 
+	@gcc -g $(CFLAGS) $(FILES) $(COLOR) $(LIB) -o $(NAME) 
+
 clean:
 	# make -C libft clean
 	@$(RM) .obj

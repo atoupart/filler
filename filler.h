@@ -12,71 +12,72 @@
 
 #ifndef FILLER_H
 # define FILLER_H
-
 # include "libft/libft.h"
 
-#define pte ft_putendl_fd
-#define pts ft_putstr_fd
-#define ptn ft_putnbr_fd
-#define ptcn ft_putchar_fd('\n', 2)
-#define p fprintf
-
-void		ft_putstr_color(char *str);
-
-
-
-typedef	struct 		s_struct
+typedef	struct		s_struct
 {
-	int				player;				//determine p1 ou p2 -> O ou X
-	char			l_player;			// lettre du joueur
-	char			l_opponent;			//	lettre 1 de l'adversaire
-	char			l_opponent2;			//	lettre 2 de l'adversaire
-	char			**plateau;			// tableau double entree qui stocke le plateau
-	char			**piece;			// tbleau double entree qui stocke la piece 
+	int				player;
+	char			l_player;
+	char			l_opponent;
+	char			l_opponent2;
+	char			**plateau;
+	char			**piece;
 	int				xinit;
 	int				yinit;
 	int				yrim;
 	int				xrim;
-	int				y;					//ordonné max plateau
-	int				x;					//abscisse max plateau
-	int				yp;					//ordonne total piece
-	int				xp;					//abscisse total piece
-	int				y1;				//ordonné point player plateau
-	int				x1;				//abscisse point player plateau
-	int				yy1;				//ordonné point player plateau dans find2
-	int				xx1;				//abscisse point player plateau dans find2
-	int				y2;				//ordonné point opponent plateau
-	int				x2;				//abscisse point opponent plateau
-	int    			ap;				//abscisse point piece mouvant  general
-	int    			app;				//abscisse point piece mouvant dans search point 
-	int 			op;				//ordonne point piece mouvant dans search point
-	int    			ap2;			//abscisse point piece mouvant dans la verif de piece
-	int 			op2;			//ordonne point piece mouveant dans la verif de piece
-	int				py;				//ordonne point piece initial
-	int				px;				//abscisse point piece initial
-	int				pyy;				//ordonne point piece initial dans reorientate_piece
-	int				pxx;				//abscisse point piece initial dans reorientate piece
-	int				nb_star;		//nombre de * dans la ligne donner
-	int				nb;				//nombre qui va verifier les *
-	int				ok_line;		// determine si tout se passe bien sur les verification de posage de piece
-	int				ok_height;		// determiner si tout se passe bien par colonne	
-	int				ok_star;			// determine si il y a bien une etoile chevauché 
-	int				height;			//hauteur de la piece reel
-	int				diff;			//determine la difference entre l'absiesse de chaque ligne
-	int				ecart;			//determine lecart entre l'abscisse de chaque ligne de search point
-	int 			diff_h;						// difference hauteur orientation piece
-	int 			diff_l;						// difference largeur orientation piece
-	int				i;				// index utile
-	int				j;				// index utile	
-	int 			result;			//pour find 1
-	int 			result2;		//pour find 2
-	int 			res_o;		//pour opponent
-	int 			res_p;		//pour player
-	int 			res_orient;		//pour orientation piece 1
-	int 			res_orient2;		//pour orientation piece 2
+	int				y;
+	int				x;
+	int				yp;
+	int				xp;
+	int				y1;
+	int				x1;
+	int				yy1;
+	int				xx1;
+	int				y2;
+	int				x2;
+	int				ap;
+	int				app;
+	int				op;
+	int				ap2;
+	int				op2;
+	int				py;
+	int				px;
+	int				pyy;
+	int				pxx;
+	int				nb_star;
+	int				nb;
+	int				ok_line;
+	int				ok_height;
+	int				ok_star;
+	int				height;
+	int				diff;
+	int				ecart;
+	int				diff_h;
+	int				diff_l;
+	int				i;
+	int				j;
+	int				result;
+	int				result2;
+	int				res_o;
+	int				res_p;
+	int				res_orient;
+	int				res_orient2;
 	int				rim;
+	int				ver;
+	int				ppx;
+	int				ppy;
+	int				xx;
+	int				yy;
+	int				ii;
 
 }					t_struct;
+
+/*
+**				color_filler.c
+*/
+
+void				ft_putstr_color(char *str);
 
 /*
 **				filler.c
@@ -97,11 +98,10 @@ void				determine_piece(t_struct *s, char *str);
 **				determine_y1_x1.c
 */
 
-void				determine_rim(t_struct *s, int i);
+void				determine_rim(t_struct *s);
 void				follow_rim(t_struct *s);
 int					verif_rim(t_struct *s);
 void				determine_y1_x1(t_struct *s, int k, int i);
-
 
 /*
 **				recursive_point.c
@@ -113,12 +113,12 @@ int					precise_player_diag(t_struct *s);
 int					precise_opponent(t_struct *s);
 int					precise_opponent_diag(t_struct *s);
 
-
-
 /*
 **				search_position.c
 */
 
+int					inside_verif_ligne_piece(t_struct *s, int y1, int x1);
+int					inside_search_position(t_struct *s, int y1, int x1);
 int					verif_line_piece(t_struct *s, int j, int y1, int x1);
 int					verif_piece_posable(t_struct *s, int y1, int x1);
 int					search_position(t_struct *s, int y1, int x1);
@@ -127,6 +127,8 @@ int					search_position(t_struct *s, int y1, int x1);
 **				search_position2.c
 */
 
+int					inside_search_position1(t_struct *s, int nb_star, int pxx);
+int					inside_search_position2(t_struct *s, int y1, int x1);
 int					verif_line_piece2(t_struct *s, int j, int y1, int x1);
 int					verif_piece_posable2(t_struct *s, int y1, int x1);
 int					search_position2(t_struct *s, int y1, int x1);
@@ -145,16 +147,11 @@ int					find_last_star(t_struct *s, int opj);
 **				fonctions_tool2.c
 */
 
-int					calcul_o(t_struct *s, int y2, int x2);
-int					calcul_p(t_struct *s, int y1, int x1);
 int					find_point_player_hg(t_struct *s);
-int					find_point_player_hd(t_struct *s);
-int					find_point_player_bg(t_struct *s);
 int					find_point_player_bd(t_struct *s);
 int					find_point_opponent_bd(t_struct *s);
 int					find_point_opponent_hg(t_struct *s);
 int					look_around(t_struct *s, int y1, int x1);
-int					touch_around(t_struct *s, int y1, int x1);
 
 /*
 **				orientate_piece.c
@@ -162,7 +159,7 @@ int					touch_around(t_struct *s, int y1, int x1);
 
 int					calcul2(int y1, int x1, int y2, int x2);
 int					find_opdown(t_struct *s);
-int 				find_apleft(t_struct *s);
+int					find_apleft(t_struct *s);
 void				orientate_piece(t_struct *s);
 
 /*
@@ -170,6 +167,10 @@ void				orientate_piece(t_struct *s);
 */
 
 int					search(t_struct *s, int y1, int x1);
+int					calcul_o(t_struct *s, int y2, int x2);
+int					calcul_p(t_struct *s, int y1, int x1);
+int					touch_around(t_struct *s, int y1, int x1);
+int					touch_around_2(t_struct *s, int y1, int x1);
 
 /*
 **				parcour_point.c
@@ -179,15 +180,23 @@ int					parcour(t_struct *s, int k);
 int					parcour_point_hg(t_struct *s);
 int					parcour_point_hd(t_struct *s);
 int					parcour_point_bd(t_struct *s);
+
+/*
+**				tool_parcour_search.c
+*/
+
+int					touch_op2(t_struct *s, int k, int j, int i);
+int					test_ar_2(t_struct *s, int k, int j, int i);
 int					test_around(t_struct *s);
-int 				touch_opponent(t_struct *s);
+int					touch_opponent(t_struct *s);
+int					inside_verif_ligne_piece2(t_struct *s, int y1, int x1);
 
 /*
 **				diagonal_point.c
 */
 
-int				find_direction(t_struct *s, int l);
-void			indicate_direction(t_struct *s, int l, int k);
-void			indicate_direction2(t_struct *s, int l, int k);
+int					find_direction(t_struct *s, int l);
+void				indicate_direction(t_struct *s, int l, int k);
+void				indicate_direction2(t_struct *s, int l, int k);
 
 #endif
