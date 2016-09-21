@@ -51,18 +51,17 @@ void		init_player(t_struct *s)
 
 void		init_player_plateau(t_struct *s)
 {
-	int		i;
 	char	*str;
 	char	*tmp;
 
-	i = 0;
+	s->i = 0;
 	get_next_line(0, &str);
-	ft_putstr_fd("111>", 2);ft_putstr_color(str);
+	ft_putstr_color(str);
 	s->player = ft_strstr(str, "p1") ? 1 : 2;
 	ft_strdel(&str);
 	init_player(s);
 	get_next_line(0, &str);
-	ft_putstr_fd("222>", 2);ft_putstr_color(str);
+	ft_putstr_color(str);
 	tmp = str;
 	if (ft_strstr(str, "Plateau"))
 	{
@@ -73,27 +72,26 @@ void		init_player_plateau(t_struct *s)
 			str++;
 		s->x = ft_atoi(str);
 		s->plateau = (char**)ft_memalloc(sizeof(char*) * (s->y + 1));
-		while (i < s->y + 1)
-			s->plateau[i++] = (char*)ft_memalloc(sizeof(char) * (s->x + 1));
+		while (s->i < s->y + 1)
+			s->plateau[s->i++] = (char*)ft_memalloc(sizeof(char) * (s->x + 1));
 	}
 	ft_strdel(&tmp);
 }
 
 void		determine_plateau(t_struct *s)
-{ 
+{
 	char	*str;
 	int		i;
-	int		j;
 	int		k;
 
-	j = 0;
+	s->j = 0;
 	get_next_line(0, &str);
-	ft_putstr_fd("333>", 2);ft_putstr_color(str);
+	ft_putstr_color(str);
 	ft_strdel(&str);
-	while (j < s->y)
+	while (s->j < s->y)
 	{
 		get_next_line(0, &str);
-		ft_putstr_fd("444>", 2);ft_putstr_color(str);
+		ft_putstr_color(str);
 		i = 0;
 		k = 0;
 		while (str[i] != ' ')
@@ -101,20 +99,18 @@ void		determine_plateau(t_struct *s)
 		i++;
 		while (k < s->x)
 		{
-			s->plateau[j][k] = str[i + k];
+			s->plateau[s->j][k] = str[i + k];
 			k++;
 		}
-		j++;
+		s->j++;
 		ft_strdel(&str);
 	}
 }
 
-void		determine_piece(t_struct *s, char *str)
+void		determine_piece(t_struct *s, char *str, char *tmp)
 {
-	char	*tmp;
-
 	get_next_line(0, &str);
-	ft_putstr_fd("555>", 2);ft_putstr_color(str);
+	ft_putstr_color(str);
 	tmp = str;
 	while (!(ft_isdigit(*str)))
 		str++;
@@ -127,18 +123,14 @@ void		determine_piece(t_struct *s, char *str)
 	s->i = 0;
 	while (s->i < s->yp + 1)
 		s->piece[s->i++] = (char*)ft_memalloc(sizeof(char) * (s->xp + 1));
-	s->j = 0;
-	while (s->j < s->yp)
+	s->j = -1;
+	while (++s->j < s->yp)
 	{
 		get_next_line(0, &str);
-		ft_putstr_fd("666>", 2);ft_putstr_color(str);
-		s->i = 0;
-		while (s->i < s->xp)
-		{
+		ft_putstr_color(str);
+		s->i = -1;
+		while (s->i++ < s->xp)
 			s->piece[s->j][s->i] = str[s->i];
-			s->i++;
-		}
-		s->j++;
 		ft_strdel(&str);
 	}
 }

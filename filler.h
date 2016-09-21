@@ -64,6 +64,7 @@ typedef	struct		s_struct
 	int				res_orient;
 	int				res_orient2;
 	int				rim;
+	int				ret;
 	int				ver;
 	int				ppx;
 	int				ppy;
@@ -78,6 +79,9 @@ typedef	struct		s_struct
 */
 
 void				ft_putstr_color(char *str);
+void				init_player_plateau(t_struct *s);
+void				determine_plateau(t_struct *s);
+void				determine_piece(t_struct *s, char *str, char *tmp);
 
 /*
 **				filler.c
@@ -92,7 +96,7 @@ int					main(void);
 
 void				init_player_plateau(t_struct *s);
 void				determine_plateau(t_struct *s);
-void				determine_piece(t_struct *s, char *str);
+void				determine_piece(t_struct *s, char *str, char *tmp);
 
 /*
 **				determine_y1_x1.c

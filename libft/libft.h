@@ -29,7 +29,6 @@
 
 # define BUFF_SIZE 10
 
-
 typedef struct		s_list
 {
 	void			*content;

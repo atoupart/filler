@@ -58,7 +58,7 @@ void		init_player_plateau(t_struct *s)
 
 void		determine_plateau(t_struct *s)
 {
-	char *str;
+	char	*str;
 	int		i;
 	int		j;
 	int		k;
@@ -84,10 +84,8 @@ void		determine_plateau(t_struct *s)
 	}
 }
 
-void		determine_piece(t_struct *s, char *str)
+void		determine_piece(t_struct *s, char *str, char *tmp)
 {
-	char *tmp;
-	
 	get_next_line(0, &str);
 	tmp = str;
 	while (!(ft_isdigit(*str)))
@@ -101,17 +99,13 @@ void		determine_piece(t_struct *s, char *str)
 	s->i = 0;
 	while (s->i < s->yp + 1)
 		s->piece[s->i++] = (char*)ft_memalloc(sizeof(char) * (s->xp + 1));
-	s->j = 0;
-	while (s->j < s->yp)
+	s->j = -1;
+	while (++s->j < s->yp)
 	{
 		get_next_line(0, &str);
-		s->i = 0;
-		while (s->i < s->xp)
-		{
+		s->i = -1;
+		while (s->i++ < s->xp)
 			s->piece[s->j][s->i] = str[s->i];
-			s->i++;
-		}
-		s->j++;
 		ft_strdel(&str);
 	}
 }
