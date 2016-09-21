@@ -58,6 +58,7 @@ int				main(void)
 			ft_strdel(&str);
 		}
 		make_filler(&s, k, i);
+		
 	}
 	return (0);
 }
