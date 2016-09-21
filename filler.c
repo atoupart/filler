@@ -29,40 +29,32 @@ void			make_filler(t_struct *s, int k, int i)
 
 int				main(void)
 {
-	char *str;
+	int			i;
+	int			k;
+	char		*str;
+	t_struct	s;
 
+	ft_bzero(&s, sizeof(t_struct));
 	str = NULL;
-	while (get_next_line(0, &str))
+	i = -1;
+	k = 1;
+	while (42)
 	{
-		ft_putendl(str);
-		ft_strdel(&str);
+		i++;
+		k *= -1;
+		if (s.player == 0 || s.plateau == NULL)
+			init_player_plateau(&s);
+		else
+		{
+			get_next_line(0, &str);
+			if (*str == '\0')
+			{
+				ft_strdel(&str);
+				return (0);
+			}
+			ft_strdel(&str);
+		}
+		make_filler(&s, k, i);
 	}
-	// int			i;
-	// int			k;
-	// char		*str;
-	// t_struct	s;
-
-	// ft_bzero(&s, sizeof(t_struct));
-	// str = NULL;
-	// i = -1;
-	// k = 1;
-	// while (42)
-	// {
-	// 	i++;
-	// 	k *= -1;
-	// 	if (s.player == 0 || s.plateau == NULL)
-	// 		init_player_plateau(&s);
-	// 	else
-	// 	{
-	// 		get_next_line(0, &str);
-	// 		if (*str == '\0')
-	// 		{
-	// 			ft_strdel(&str);
-	// 			return (0);
-	// 		}
-	// 		ft_strdel(&str);
-	// 	}
-	// 	make_filler(&s, k, i);
-	// }
 	return (0);
 }
