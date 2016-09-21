@@ -85,7 +85,7 @@ SRCS	= ft_atoi.c\
 		ft_lstdelone.c\
 		ft_lstiter.c\
 		ft_lstmap.c\
-		get_next_line.c\
+		#get_next_line.c\
 		ft_error.c\
 		ft_printf.c\
 		conv_funcs.c\

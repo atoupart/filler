@@ -14,6 +14,9 @@
 # define FILLER_H
 # include "libft/libft.h"
 
+int					get_next_line(int const fd, char **line);
+
+
 typedef	struct		s_struct
 {
 	int				player;

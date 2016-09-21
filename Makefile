@@ -26,7 +26,9 @@ FILES	= filler.c\
 		search.c\
 		parcour_point.c\
 		tool_parcour_search.c\
-		determine_y1_x1.c
+		determine_y1_x1.c\
+		get_next_line.c\
+
 
 COLOR = color_filler.c
 		

@@ -39,7 +39,7 @@ typedef struct		s_list
 
 char				*ft_strndup(char *str, int n);
 int					ft_error(char *str);
-int					get_next_line(int const fd, char **line);
+//int					get_next_line(int const fd, char **line);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);

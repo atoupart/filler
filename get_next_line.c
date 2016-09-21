@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 // #include "libft.h"
-
 #include "filler.h"
 
 // int			before_while(char **str, char **line)
@@ -110,7 +109,7 @@ int				get_next_line(int const fd, char **line)
 	str[fd] = !str[fd] ? ft_strnew(0) : str[fd];
 	while (!(ft_strchr(str[fd], '\n')) && (ret = read(fd, stk, BUFF_SIZE)) > 0)
 		join_stk(&str[fd], stk, ret);
-	ft_strdel
+	ft_strdel(&stk);
 	if (ret == -1)
 		return (-1);
 	if (ret == 0 && !(ft_strchr(str[fd], '\n')))
