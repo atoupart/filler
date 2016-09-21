@@ -57,12 +57,12 @@ void		init_player_plateau(t_struct *s)
 
 	i = 0;
 	get_next_line(0, &str);
-	ft_putstr_color(str);
+	ft_putstr_fd("111>", 2);ft_putstr_color(str);
 	s->player = ft_strstr(str, "p1") ? 1 : 2;
 	ft_strdel(&str);
 	init_player(s);
 	get_next_line(0, &str);
-	ft_putstr_color(str);
+	ft_putstr_fd("222>", 2);ft_putstr_color(str);
 	tmp = str;
 	if (ft_strstr(str, "Plateau"))
 	{
@@ -76,6 +76,7 @@ void		init_player_plateau(t_struct *s)
 		while (i < s->y + 1)
 			s->plateau[i++] = (char*)ft_memalloc(sizeof(char) * (s->x + 1));
 	}
+	ft_strdel(&tmp);
 }
 
 void		determine_plateau(t_struct *s)
@@ -87,12 +88,12 @@ void		determine_plateau(t_struct *s)
 
 	j = 0;
 	get_next_line(0, &str);
-	ft_putstr_color(str);
+	ft_putstr_fd("333>", 2);ft_putstr_color(str);
 	ft_strdel(&str);
 	while (j < s->y)
 	{
 		get_next_line(0, &str);
-		ft_putstr_color(str);
+		ft_putstr_fd("444>", 2);ft_putstr_color(str);
 		i = 0;
 		k = 0;
 		while (str[i] != ' ')
@@ -113,7 +114,7 @@ void		determine_piece(t_struct *s, char *str)
 	char	*tmp;
 
 	get_next_line(0, &str);
-	ft_putstr_color(str);
+	ft_putstr_fd("555>", 2);ft_putstr_color(str);
 	tmp = str;
 	while (!(ft_isdigit(*str)))
 		str++;
@@ -130,7 +131,7 @@ void		determine_piece(t_struct *s, char *str)
 	while (s->j < s->yp)
 	{
 		get_next_line(0, &str);
-		ft_putstr_color(str);
+		ft_putstr_fd("666>", 2);ft_putstr_color(str);
 		s->i = 0;
 		while (s->i < s->xp)
 		{

@@ -33,6 +33,7 @@ int				main(void)
 	int			k;
 	char		*str;
 	t_struct	s;
+	int ret;
 
 	ft_bzero(&s, sizeof(t_struct));
 	str = NULL;
@@ -46,12 +47,14 @@ int				main(void)
 			init_player_plateau(&s);
 		else
 		{
-			get_next_line(0, &str);
-			if (*str == '\0')
+			ret = get_next_line(0, &str);
+			if (ret == 0)
 			{
 				ft_strdel(&str);
 				return (0);
 			}
+			else
+				ft_putstr_fd("777>", 2);ft_putstr_color(str);
 			ft_strdel(&str);
 		}
 		make_filler(&s, k, i);

@@ -95,7 +95,8 @@ SRCS	= ft_atoi.c\
 		parse_fmt.c\
 		split_fmt.c\
 		padding.c\
-		padding2.c
+		padding2.c\
+		ft_strndup.c
 
 CFLAGS	= -Wall -Wextra -Werror
 

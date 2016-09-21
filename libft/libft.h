@@ -25,8 +25,10 @@
 # include <stdarg.h>
 # include <math.h>
 # include <limits.h>
+# include <sys/uio.h>
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 10
+
 
 typedef struct		s_list
 {
@@ -35,6 +37,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+char				*ft_strndup(char *str, int n);
 int					ft_error(char *str);
 int					get_next_line(int const fd, char **line);
 void				*ft_memset(void *b, int c, size_t len);
