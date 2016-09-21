@@ -12,6 +12,29 @@
 
 #include "filler.h"
 
+void			free_all(t_struct *s)
+{
+	int i;
+
+	i = 0;
+	while (i < s->y + 1)
+	{
+		ft_strdel(&s->plateau[i]);
+		i++;
+	}
+	free(s->plateau);
+	i = 0;
+	while (i < s->yp + 1)
+	{
+		ft_strdel(&s->piece[i]);
+		i++;
+	}
+	free(s->piece);
+}
+
+
+
+
 void			make_filler(t_struct *s, int k, int i)
 {
 	char *str;
@@ -51,6 +74,7 @@ int				main(void)
 			if (ret == 0)
 			{
 				ft_strdel(&str);
+				free_all(&s);
 				return (0);
 			}
 			else
@@ -58,7 +82,8 @@ int				main(void)
 			ft_strdel(&str);
 		}
 		make_filler(&s, k, i);
-		
+
 	}
+
 	return (0);
 }
