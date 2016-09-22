@@ -28,7 +28,7 @@ FILES	= \
 		parcour_point.c\
 		tool_parcour_search.c\
 		determine_y1_x1.c\
-		minimap.c
+		carli_style.c
 
 COLOR = color_filler.c
 		

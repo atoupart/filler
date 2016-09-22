@@ -1,29 +1,1189 @@
-$$$ exec p2 : [./atoupart.filler]
-Plateau 24 40:
-    0123456789012345678901234567890123456789
-000 ........................................
-001 ........................................
-002 ........................................
-003 ...O....................................
-004 ........................................
-005 ........................................
-006 ........................................
-007 ........................................
-008 ........................................
-009 ........................................
-010 ........................................
-011 ........................................
-012 ........................................
-013 ........................................
-014 ........................................
-015 ........................................
-016 ........................................
-017 ........................................
-018 ........................................
-019 ................................X.......
-020 ........................................
-021 ........................................
-022 ........................................
-023 ........................................
-Piece 1 5:
-.***.
+piece posé = 0
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 1
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 2
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 3
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 4
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 5
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 6
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 7
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 8
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 9
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 10
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 11
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 12
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 13
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 14
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 15
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 16
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 17
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 18
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 19
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 20
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 21
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 22
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 23
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 24
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 25
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 26
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 27
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 28
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 29
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 30
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 31
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 32
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 33
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 34
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 35
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 36
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 37
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 38
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 39
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 40
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 41
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 42
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 43
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 44
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 45
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 46
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 47
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 48
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 49
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 50
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 51
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 52
+k = -1
+[93mverif_rim_g = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 19
+s->x2 = 0piece posé = 53
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 54
+k = -1
+[95mall aquis donc
+s->y1 = 5
+s->x1 = 30
+s->y2 = 0
+s->x2 = 19piece posé = 55
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 56
+k = -1
+[95mall aquis donc
+s->y1 = 4
+s->x1 = 29
+s->y2 = 0
+s->x2 = 19piece posé = 57
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 58
+k = -1
+[95mall aquis donc
+s->y1 = 3
+s->x1 = 28
+s->y2 = 0
+s->x2 = 19piece posé = 59
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 60
+k = -1
+[95mall aquis donc
+s->y1 = 3
+s->x1 = 28
+s->y2 = 0
+s->x2 = 19piece posé = 61
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 62
+k = -1
+[95mall aquis donc
+s->y1 = 3
+s->x1 = 27
+s->y2 = 0
+s->x2 = 19piece posé = 63
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 64
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 65
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 66
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 67
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 68
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 69
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 70
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 71
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 72
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 73
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 74
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 75
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 76
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 77
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 78
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 79
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 80
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 81
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 82
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 83
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 84
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 85
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 86
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 87
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 88
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 89
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 90
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 91
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 92
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 93
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 94
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 95
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 96
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 97
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 98
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 99
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 100
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 101
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 102
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 103
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 104
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 105
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 106
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 107
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 108
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 109
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 110
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 111
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 112
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 113
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 114
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 115
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 116
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 117
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 118
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 119
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 120
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 121
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 122
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 123
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 124
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 19piece posé = 125
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 126
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 17piece posé = 127
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 128
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 14piece posé = 129
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 130
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 14piece posé = 131
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 132
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 12piece posé = 133
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 134
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 12piece posé = 135
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 136
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 12piece posé = 137
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 138
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 10piece posé = 139
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 140
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 10piece posé = 141
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 142
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 143
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 144
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 145
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 146
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 147
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 148
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 149
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 150
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 151
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 152
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 153
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 154
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 155
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 156
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 157
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 158
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 8piece posé = 159
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 160
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 7piece posé = 161
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 162
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 163
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 164
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 165
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 166
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 167
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 168
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 169
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 170
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 171
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 172
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 173
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 174
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 175
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 176
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 177
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 178
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 179
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 180
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 181
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 182
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 183
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 184
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 185
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 186
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 187
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 188
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 189
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 190
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 191
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 192
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 193
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 194
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 195
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 196
+k = -1
+[95mall aquis donc
+s->y1 = 2
+s->x1 = 32
+s->y2 = 0
+s->x2 = 2piece posé = 197
+k = 1
+[91mverif_rim_h = 0 donc
+s->y1 = 19
+s->x1 = 32
+s->y2 = 0
+s->x2 = 32piece posé = 198

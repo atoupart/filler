@@ -70,10 +70,10 @@ int			pose_x_by_y(t_struct *s)
 void		minimap(t_struct *s, int k, int i)
 {
 	k = -1;
-	i++;
-	// if (i == 0)
-	// 	determine_rim(s);
-	// s->rim = verif_rim(s);
+	// i++;
+	if (i == 0)
+		determine_rim(s);
+	s->rim = verif_rim(s);
 	// if (s->rim == 0)
 	// {
 	// 	s->x1 = s->xinit;
@@ -94,39 +94,64 @@ void		minimap(t_struct *s, int k, int i)
 	// }
 	// else
 	// {
-		find_point_opponent_hd(s);
-		find_point_player_hg(s);
+		// find_point_opponent_hd(s);
+
+	// }
+
+
+
+
+	// if (s->rim == 0)
+	// {
+	// 	find_point_player_hd(s);
+	// 	s->y2 = 0;
+	// 	s->x2 = s->x1;
+	// }
+	// else
+	// {
+	// 	find_point_player_hg(s);
+		find_point_opponent_hg(s);
+
 	// }
 
 	recursive_find_best_points(s);
 	orientate_piece(s);
-	fprintf(stderr, "s->y1 = %d\ns->x1 = %d\n", s->y1, s->x1);
-	fprintf(stderr, "s->y2 = %d\ns->x2 = %d\n", s->y2, s->x2);
-	fprintf(stderr, "test-search\n");
 
-	if (search(s, s->y1, s->x1) == 0)
+	if (parcour_point_hd(s) == 0)
 	{
-		fprintf(stderr, "test-opponent\n");
-
-		if (touch_opponent(s) == 0)
-		{
-				
-			fprintf(stderr, "test-around\n");
-
-			if (test_around(s) == 0)
-			{
-				fprintf(stderr, "test-pose_x_y\n");
-
-				if (pose_x_by_y(s) == 0)
-				{
-					fprintf(stderr, "end of possibilities\n");
-
-					s->y1 = 0;
-					s->x1 = 0;
-					print_piece(s);
-				}
-			}
-
-		}
+		s->y1 = 0;
+		s->x1 = 0;
+		print_piece(s);
 	}
+	
+
+	// fprintf(stderr, "s->y1 = %d\ns->x1 = %d\n", s->y1, s->x1);
+	// fprintf(stderr, "s->y2 = %d\ns->x2 = %d\n", s->y2, s->x2);
+	// fprintf(stderr, "test-search\n");
+
+	// if (search(s, s->y1, s->x1) == 0)
+	// {
+	// 	fprintf(stderr, "test-opponent\n");
+
+	// 	if (touch_opponent(s) == 0)
+	// 	{
+				
+	// 		fprintf(stderr, "test-around\n");
+
+	// 		if (test_around(s) == 0)
+	// 		{
+	// 			fprintf(stderr, "test-pose_x_y\n");
+
+	// 			if (pose_x_by_y(s) == 0)
+	// 			{
+	// 				fprintf(stderr, "end of possibilities\n");
+
+	// 				s->y1 = 0;
+	// 				s->x1 = 0;
+	// 				print_piece(s);
+	// 			}
+	// 		}
+
+	// 	}
+	// }
 }

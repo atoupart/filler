@@ -75,6 +75,18 @@ typedef	struct		s_struct
 }					t_struct;
 
 /*
+**				carli_style.c
+*/
+
+int					verif_rim_h(t_struct *s);
+int					verif_rim_d(t_struct *s);
+int					verif_rim_b(t_struct *s);
+int					verif_rim_g(t_struct *s);
+void				carli_style(t_struct *s, int k);
+
+
+
+/*
 **				minimap.c
 */
 
@@ -158,6 +170,8 @@ int					find_last_star(t_struct *s, int opj);
 */
 
 int					find_point_player_hg(t_struct *s);
+int					find_point_player_bg(t_struct *s);
+int					find_point_player_hd(t_struct *s);
 int					find_point_player_bd(t_struct *s);
 int					find_point_opponent_bd(t_struct *s);
 int					find_point_opponent_hg(t_struct *s);
