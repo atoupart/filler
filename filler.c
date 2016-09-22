@@ -12,6 +12,19 @@
 
 #include "filler.h"
 
+void			free_piece(t_struct *s)
+{
+	int i;
+
+	i = 0;
+	while (i < s->yp + 1)
+	{
+		ft_strdel(&s->piece[i]);
+		i++;
+	}
+	free(s->piece);
+}
+
 void			free_all(t_struct *s)
 {
 	int i;
@@ -23,13 +36,7 @@ void			free_all(t_struct *s)
 		i++;
 	}
 	free(s->plateau);
-	i = 0;
-	while (i < s->yp + 1)
-	{
-		ft_strdel(&s->piece[i]);
-		i++;
-	}
-	free(s->piece);
+	free_piece(s);
 }
 
 void			make_filler(t_struct *s, int k, int i)
@@ -62,6 +69,7 @@ int				thank_norm(t_struct *s, char *str)
 		free_all(s);
 		return (0);
 	}
+	free_piece(s);
 	ft_strdel(&str);
 	return (1);
 }
