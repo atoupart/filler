@@ -40,12 +40,12 @@ void		follow_rim(t_struct *s)
 		s->yrim = s->y1;
 		s->xrim = 0;
 	}
-	else if (s->y1 > s->y / 2 && s->i <= s->j)
+	else if (s->y1 >= s->y / 2 && s->i < s->j)
 	{
 		s->yrim = s->y - 1;
 		s->xrim = s->x1;
 	}
-	else if (s->y1 > s->y / 2 && s->i > s->j)
+	else if (s->y1 >= s->y / 2 && s->i >= s->j)
 	{
 		s->yrim = s->y1;
 		s->xrim = s->x - 1;

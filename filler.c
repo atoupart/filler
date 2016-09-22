@@ -48,14 +48,21 @@ void			make_filler(t_struct *s, int k, int i)
 	tmp = NULL;
 	determine_plateau(s);
 	determine_piece(s, str, tmp);
-	determine_y1_x1(s, k, i);
-	if (search(s, s->y1, s->x1) == 0)
+
+	if (s->x <= 20)
 	{
-		if (parcour(s, k) == 0)
-		{
-			s->y1 = 0;
-			s->x1 = 0;
-			print_piece(s);
+		minimap(s, k, i);
+	}
+	else
+	{	determine_y1_x1(s, k, i);
+		if (search(s, s->y1, s->x1) == 0)
+		{	
+			if (parcour(s, k) == 0)
+			{
+				s->y1 = 0;
+				s->x1 = 0;
+				print_piece(s);
+			}
 		}
 	}
 }
@@ -87,6 +94,7 @@ int				main(void)
 	k = 1;
 	while (42)
 	{
+		sleep(1);
 		i++;
 		k *= -1;
 		if (s.player == 0 || s.plateau == NULL)

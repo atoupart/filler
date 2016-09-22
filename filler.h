@@ -75,6 +75,12 @@ typedef	struct		s_struct
 }					t_struct;
 
 /*
+**				minimap.c
+*/
+
+void				minimap(t_struct *s, int k, int i);
+
+/*
 **				color_filler.c
 */
 
