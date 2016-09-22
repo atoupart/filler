@@ -45,7 +45,11 @@ void			make_filler(t_struct *s, int k, int i)
 	if (search(s, s->y1, s->x1) == 0)
 	{
 		if (parcour(s, k) == 0)
+		{
+			s->y1 = 0;
+			s->x1 = 0;
 			print_piece(s);
+		}
 	}
 }
 

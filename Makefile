@@ -42,6 +42,7 @@ $(NAME):
 	@gcc -g $(CFLAGS) $(FILES) $(NORMAL) $(LIB) -o $(NAME) 
 	
 color: 
+	@make -C libft
 	@gcc -g $(CFLAGS) $(FILES) $(COLOR) $(LIB) -o $(NAME) 
 
 clean:
