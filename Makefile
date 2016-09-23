@@ -22,12 +22,14 @@ FILES	= \
 		search_position.c\
 		search_position2.c\
 		fonctions_tool.c\
-		fonctions_tool2.c\
+		find_point_player.c\
+		find_point_player2.c\
+		find_point_opponent.c\
 		orientation_piece.c\
 		search.c\
 		parcour_point.c\
 		tool_parcour_search.c\
-		determine_y1_x1.c\
+		verif_rim.c\
 		carli_style.c
 
 COLOR = color_filler.c

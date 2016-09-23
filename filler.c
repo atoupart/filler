@@ -39,10 +39,37 @@ void			free_all(t_struct *s)
 	free_piece(s);
 }
 
+void			determine_carli(t_struct *s, int i, int k)
+{
+	if ( i == 0)
+	{
+		find_point_player_hg(s);
+		find_point_opponent_hg(s);
+		s->xinit = s->x1;
+		s->yinit = s->y1;
+		s->x2init = s->x2;
+		s->y2init = s->y2;
+	}
+	if (s->yinit < s->y / 2)
+	{
+		if (s->xinit < s->x / 2)
+			carli_style_hg(s, k);
+		else
+			carli_style_hd(s, k);
+	}
+	else
+	{
+		if (s->xinit < s->x / 2)
+			carli_style_bg(s, k);
+		else
+			carli_style_bd(s, k);		
+	}
+	recursive_find_best_points(s);
+	orientate_piece(s);
+}
+
 void			make_filler(t_struct *s, int k, int i)
 {
-	int e = i;
-	e++;
 	char *str;
 	char *tmp;
 
@@ -50,37 +77,16 @@ void			make_filler(t_struct *s, int k, int i)
 	tmp = NULL;
 	determine_plateau(s);
 	determine_piece(s, str, tmp);
-
-	// if (s->x <= 20)
-	// {
-	// 	minimap(s, k, i);
-	// }
-	// else
-	// {
-	if ( i == 0)
-	{
-		find_point_player_hg(s);
-		s->xinit = s->x1;
-		s->yinit = s->y1;
-
-	}
-
-
-		// determine_y1_x1(s, k, i);
-	
-		carli_style(s, k);
-		recursive_find_best_points(s);
-		orientate_piece(s);
-		if (search(s, s->y1, s->x1) == 0)
-		{	
-			if (parcour(s, k) == 0)
-			{
-				s->y1 = 0;
-				s->x1 = 0;
-				print_piece(s);
-			}
+	determine_carli(s, i, k);
+	if (search(s, s->y1, s->x1) == 0)
+	{	
+		if (parcour(s, k) == 0)
+		{
+			s->y1 = 0;
+			s->x1 = 0;
+			print_piece(s);
 		}
-	// }
+	}
 }
 
 int				thank_norm(t_struct *s, char *str)

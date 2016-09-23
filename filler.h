@@ -24,6 +24,8 @@ typedef	struct		s_struct
 	char			**piece;
 	int				xinit;
 	int				yinit;
+	int				x2init;
+	int				y2init;
 	int				yrim;
 	int				xrim;
 	int				y;
@@ -75,22 +77,50 @@ typedef	struct		s_struct
 }					t_struct;
 
 /*
-**				carli_style.c
+**				verif_rime.c
 */
 
 int					verif_rim_h(t_struct *s);
 int					verif_rim_d(t_struct *s);
 int					verif_rim_b(t_struct *s);
 int					verif_rim_g(t_struct *s);
-void				carli_style(t_struct *s, int k);
-
-
 
 /*
-**				minimap.c
+**				find_point_player.c
 */
 
-void				minimap(t_struct *s, int k, int i);
+int					find_point_player_hg(t_struct *s);
+int					find_point_player_bg(t_struct *s);
+int					find_point_player_hd(t_struct *s);
+int					find_point_player_bd(t_struct *s);
+
+/*
+**				find_point_player2.c
+*/
+
+int					find_point_player_gh(t_struct *s);
+int					find_point_player_gb(t_struct *s);
+int					find_point_player_dh(t_struct *s);
+int					find_point_player_db(t_struct *s);
+
+/*
+**				find_point_opponent.c
+*/
+
+int					find_point_opponent_hg(t_struct *s);
+int					find_point_opponent_hd(t_struct *s);
+int					find_point_opponent_bg(t_struct *s);
+int					find_point_opponent_bd(t_struct *s);
+
+/*
+**				carli_style.c
+*/
+
+
+void				carli_style_bd(t_struct *s, int k);
+void				carli_style_bg(t_struct *s, int k);
+void				carli_style_hd(t_struct *s, int k);
+void				carli_style_hg(t_struct *s, int k);
 
 /*
 **				color_filler.c
@@ -105,6 +135,9 @@ void				determine_piece(t_struct *s, char *str, char *tmp);
 **				filler.c
 */
 
+void				free_piece(t_struct *s);
+void				free_all(t_struct *s);
+void				determine_carli(t_struct *s, int i, int k);
 void				make_filler(t_struct *s, int k, int i);
 int					main(void);
 
@@ -115,15 +148,6 @@ int					main(void);
 void				init_player_plateau(t_struct *s);
 void				determine_plateau(t_struct *s);
 void				determine_piece(t_struct *s, char *str, char *tmp);
-
-/*
-**				determine_y1_x1.c
-*/
-
-void				determine_rim(t_struct *s);
-void				follow_rim(t_struct *s);
-int					verif_rim(t_struct *s);
-void				determine_y1_x1(t_struct *s, int k, int i);
 
 /*
 **				recursive_point.c
@@ -166,18 +190,6 @@ int					find_first_star(t_struct *s, int j);
 int					find_last_star(t_struct *s, int opj);
 
 /*
-**				fonctions_tool2.c
-*/
-
-int					find_point_player_hg(t_struct *s);
-int					find_point_player_bg(t_struct *s);
-int					find_point_player_hd(t_struct *s);
-int					find_point_player_bd(t_struct *s);
-int					find_point_opponent_bd(t_struct *s);
-int					find_point_opponent_hg(t_struct *s);
-int					look_around(t_struct *s, int y1, int x1);
-
-/*
 **				orientate_piece.c
 */
 
@@ -204,6 +216,7 @@ int					parcour(t_struct *s, int k);
 int					parcour_point_hg(t_struct *s);
 int					parcour_point_hd(t_struct *s);
 int					parcour_point_bd(t_struct *s);
+int					look_around(t_struct *s, int y1, int x1);
 
 /*
 **				tool_parcour_search.c
@@ -214,13 +227,5 @@ int					test_ar_2(t_struct *s, int k, int j, int i);
 int					test_around(t_struct *s);
 int					touch_opponent(t_struct *s);
 int					inside_verif_ligne_piece2(t_struct *s, int y1, int x1);
-
-/*
-**				diagonal_point.c
-*/
-
-int					find_direction(t_struct *s, int l);
-void				indicate_direction(t_struct *s, int l, int k);
-void				indicate_direction2(t_struct *s, int l, int k);
 
 #endif

@@ -94,3 +94,27 @@ int			parcour_point_hd(t_struct *s)
 	}
 	return (0);
 }
+
+int				look_around(t_struct *s, int y1, int x1)
+{
+	int k;
+
+	k = 0;
+	if (y1 - 1 >= 0)
+		if (s->plateau[y1 - 1][x1] == '.' ||\
+			s->plateau[y1 - 1][x1 + 1] == '.')
+			k++;
+	if (x1 - 1 >= 0)
+		if (s->plateau[y1][x1 - 1] == '.' ||\
+			s->plateau[y1 + 1][x1 - 1] == '.')
+			k++;
+	if (y1 - 1 >= 0 && x1 - 1 >= 0 && \
+		s->plateau[y1 - 1][x1 - 1] == '.')
+		k++;
+	if (s->plateau[y1][x1 + 1] == '.' ||\
+		s->plateau[y1 + 1][x1] == '.')
+		k++;
+	if (s->plateau[y1 + 1][x1 + 1] == '.')
+		k++;
+	return (k);
+}
