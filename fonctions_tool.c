@@ -14,6 +14,10 @@
 
 void		print_piece(t_struct *s)
 {
+
+	fprintf(stderr, "\033[91m>>Y1 = %d\n", s->y1);
+	fprintf(stderr, "\033[91m>>X1 = %d\n\033[0m", s->x1);
+
 	ft_putnbr(s->y1);
 	ft_putchar(' ');
 	ft_putnbr(s->x1);

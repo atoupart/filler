@@ -73,8 +73,18 @@ typedef	struct		s_struct
 	int				xx;
 	int				yy;
 	int				ii;
+	int				h;
+	int				w;
 
 }					t_struct;
+
+
+/*
+**				tcheck_piece.c
+*/
+
+void				tcheck_piece_height(t_struct *s);
+void				tcheck_piece_width(t_struct *s);
 
 /*
 **				verif_rime.c

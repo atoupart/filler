@@ -30,7 +30,8 @@ FILES	= \
 		parcour_point.c\
 		tool_parcour_search.c\
 		verif_rim.c\
-		carli_style.c
+		carli_style.c\
+		tcheck_piece.c
 
 COLOR = color_filler.c
 		

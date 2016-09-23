@@ -15,26 +15,26 @@
 
 void			carli_style_bd(t_struct *s, int k)
 {
-	if (k < 0 && verif_rim_g(s) == 0)
+	if (s->w > s->h && verif_rim_g(s) == 0)
 	{
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = s->y1;
 			s->x2 = 0;			
 	}
-	else
+	else if (verif_rim_g(s) != 0 && k < 0)
 	{
 		find_point_player_gh(s);
 		find_point_opponent_hg(s);
 	}
-	if (k > 0 && verif_rim_h(s) == 0)
+	if (s->h > s->w && verif_rim_h(s) == 0)
 	{
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = 0;
 			s->x2 = s->x1;
 	}
-	else
+	else if (verif_rim_h(s) != 0 && k > 0)
 	{
 		find_point_player_hg(s);
 		find_point_opponent_bd(s);			
@@ -50,7 +50,7 @@ void			carli_style_bg(t_struct *s, int k)
 			s->y2 = s->y1;
 			s->x2 = s->x - 1;			
 	}
-	else
+	else if (k < 0)
 	{
 		find_point_player_dh(s);
 		find_point_opponent_hd(s);
@@ -62,7 +62,7 @@ void			carli_style_bg(t_struct *s, int k)
 			s->y2 = 0;
 			s->x2 = s->x1;
 	}
-	else
+	else if (k > 0)
 	{
 		find_point_player_hd(s);
 		find_point_opponent_bg(s);			
@@ -78,7 +78,7 @@ void			carli_style_hg(t_struct *s, int k)
 			s->y2 = s->y - 1;
 			s->x2 = s->x1;			
 	}
-	else
+	else if (k < 0)
 	{
 		find_point_player_db(s);
 		find_point_opponent_bd(s);
@@ -90,7 +90,7 @@ void			carli_style_hg(t_struct *s, int k)
 			s->y2 = s->y1;
 			s->x2 = s->x - 1;
 	}
-	else
+	else if (k > 0)
 	{
 		find_point_player_bd(s);
 		find_point_opponent_hg(s);			
@@ -106,7 +106,7 @@ void			carli_style_hd(t_struct *s, int k)
 			s->y2 = s->y1;
 			s->x2 = 0;			
 	}
-	else
+	else if (k < 0)
 	{
 		find_point_player_gb(s);
 		find_point_opponent_bg(s);
@@ -118,50 +118,9 @@ void			carli_style_hd(t_struct *s, int k)
 			s->y2 = s->y - 1;
 			s->x2 = s->x1;
 	}
-	else
+	else if (k > 0)
 	{
 		find_point_player_bg(s);
-		find_point_opponent_hd(s);			
+		find_point_opponent_hd(s);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
