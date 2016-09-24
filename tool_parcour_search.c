@@ -78,7 +78,7 @@ int			touch_opponent(t_struct *s)
 	int		k;
 
 	k = 1;
-	while (k <= 10)
+	while (k <= 3)
 	{
 		j = 0;
 		while (s->y1 - k + j <= s->y1 + k)

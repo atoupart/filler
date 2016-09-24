@@ -15,15 +15,38 @@
 int			parcour(t_struct *s, int k)
 {
 	if (touch_opponent(s))
+	{
+		if (s->ver_blok == 1)
+			s->blok = 1;
+		else if (s->ver_blok == 2)
+			s->blok = 2;
+		fprintf(stderr, "\033[96mtouch_opponent passed\n");
 		return (1);
-	else if (test_around(s))
+	}
+	else if ((s->blok = 1)  == 1 && test_around(s))
+	{
+		fprintf(stderr, "\033[96mtest_around passed\n");
+
 		return (1);
+	}
 	else if (k > 0 && parcour_point_hg(s))
+	{
+		fprintf(stderr, "\033[96mtparcour_HG passed\n");
+ 
 		return (1);
+	}
 	else if (parcour_point_bd(s))
+	{
+		fprintf(stderr, "\033[96mtparcour_BD passed\n");
+
 		return (1);
+	}
 	else if (parcour_point_hd(s))
+	{
+		fprintf(stderr, "\033[96mtparcour_HD passed\n");
+
 		return (1);
+	}
 	return (0);
 }
 

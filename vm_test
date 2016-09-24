@@ -1,20 +1,21 @@
 $$$ exec p2 : [./atoupart.filler]
 Plateau 15 17:
     01234567890123456
-000 ............OO.OO
-001 ........OOOOOOOO.
-002 ..OOOOOOOO.OO....
-003 .......OOO.......
-004 .........OOO.....
-005 ..........OOOOOoo
-006 .................
-007 ..............X..
-008 ..............X..
-009 ..........XXXXXX.
-010 ...........XXXX..
-011 .........XXXXXX..
+000 .........OOOXXXX.
+001 ........OOOOXXXX.
+002 ..OOOOOOO.OOOOXX.
+003 .....O.....OOOXX.
+004 ....OO.....OOOXX.
+005 .....OO....OOOXX.
+006 .....OOOO..OOOXX.
+007 ......OOOOOOOXXXX
+008 ......OO..OOOXX..
+009 .OOO......OOOXX..
+010 ..OOOOOOOOOOOXX..
+011 ...XXX.OOXXXXXX..
 012 XXXXXXXXXXXXXXX..
-013 .................
-014 .................
-Piece 1 3:
-***
+013 X........XXXX....
+014 ........XX.......
+Piece 2 1:
+*
+*

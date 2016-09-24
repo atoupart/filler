@@ -75,6 +75,10 @@ typedef	struct		s_struct
 	int				ii;
 	int				h;
 	int				w;
+	int				a;
+	int				b;
+	int				blok;
+	int				ver_blok;
 
 }					t_struct;
 

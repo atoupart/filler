@@ -50,6 +50,11 @@ void			determine_carli(t_struct *s, int i, int k)
 		s->x2init = s->x2;
 		s->y2init = s->y2;
 	}
+
+		// s->yinit = 12;
+		// s->xinit = 14;
+		// s->x2init = 2;
+		// s->y2init = 2;
 	if (s->yinit < s->y / 2)
 	{
 		if (s->xinit < s->x / 2)
@@ -76,6 +81,10 @@ void			determine_carli(t_struct *s, int i, int k)
 			carli_style_bd(s, k);		
 		}
 	}
+			fprintf(stderr, "\033[94mY1 = %d\n", s->y1);
+	fprintf(stderr, "\033[94mX1 = %d\n", s->x1);
+	fprintf(stderr, "\033[94mY2 = %d\n", s->y2);
+	fprintf(stderr, "\033[94mX2 = %d\n\033[0m", s->x2);
 	recursive_find_best_points(s);
 	orientate_piece(s);
 }
@@ -94,9 +103,10 @@ void			make_filler(t_struct *s, int k, int i)
 	tcheck_piece_height(s);
 	tcheck_piece_width(s);
 	determine_carli(s, i, k);
+
 	fprintf(stderr, "K = %d\n", k);
-	fprintf(stderr, "\033[96mheight piece  = %d\n", s->h);
-	fprintf(stderr, "\033[96mwidth piece  = %d\n", s->w);
+	// fprintf(stderr, "\033[96mheight piece  = %d\n", s->h);
+	// fprintf(stderr, "\033[96mwidth piece  = %d\n", s->w);
 	fprintf(stderr, "\033[92mY1 = %d\n", s->y1);
 	fprintf(stderr, "\033[92mX1 = %d\n", s->x1);
 	fprintf(stderr, "\033[92mY2 = %d\n", s->y2);
@@ -104,6 +114,8 @@ void			make_filler(t_struct *s, int k, int i)
 
 	if (search(s, s->y1, s->x1) == 0)
 	{	
+		fprintf(stderr, "PAS ALLER DANS SEARCH\n");
+
 		if (parcour(s, k) == 0)
 		{
 			s->y1 = 0;
@@ -140,7 +152,13 @@ int				main(void)
 	k = 1;
 	while (42)
 	{
-		sleep(1);
+		 usleep(999991);
+		 // usleep(99999);
+		 // usleep(99991);
+		 // usleep(9999);
+
+
+
 		i++;
 		k *= -1;
 		fprintf(stderr, "piece posé = %d\n\033[0m", i);
