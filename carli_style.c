@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -14,61 +13,35 @@
 
 #include "filler.h"
 
-void			carli_style_bd(t_struct *s, int k)
+int			carli_style_bd(t_struct *s, int k)
 {
-
 	s->b = verif_rim_h(s);
-	fprintf(stderr, "s->a = %d\ns->b = %d\n", s->a, s->b);
-
-	int e = 0;
 	if ((s->w > s->h && !(s->a = verif_rim_g(s))) || (!s->a && s->b))
 	{	
-		e++;
-		fprintf(stderr, "passe 1\n");
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = s->y1;
 			s->x2 = 0;
-			s->ver_blok = 1;		
+			s->v = 1;
+			return (0);	
 	}
-	else if ((s->a && s->b && k > 0) || (s->a && s->blok == 2))
+	else if ((s->a && s->b && k > 0) || (s->a && s->blok == 2 && (s->v = 2)))
+		return (find_point_opponent_gh(s) + find_point_player_gh(s));
+	if ((s->h >= s->w && !s->b) || (!s->b && s->a))
 	{
-		e++;
-		fprintf(stderr, "passe 2\n");
-
-		find_point_player_gh(s);
-		find_point_opponent_hg(s);
-		s->ver_blok = 0;
-	}
-
-
-	if ((s->h >= s->w && !s->b) || (!s->b && s->a) )
-	{
-		e++;
-		fprintf(stderr, "passe 3\n");
 		s->y1 = s->yinit;
 		s->x1 = s->xinit;
 		s->y2 = 0;
 		s->x2 = s->x1;
-		s->ver_blok = 2;		
-
+		s->v = 2;
+		return (0);	
 	}
-	else if ((s->a && s->b && k < 0) || (!s->b && s->blok == 1))
-	{
-		e++;
-		fprintf(stderr, "passe 4\n");
-
-		find_point_player_hg(s);
-		find_point_opponent_hg(s);
-		s->ver_blok = 0;
-	}
-	if (e == 0)
-	fprintf(stderr, "CARLY STYLE BD FAIL\n");
-
-
+	else if ((s->a && s->b && k < 0) || (!s->b && s->blok == 1 && (s->v = 0)))
+		return (find_point_opponent_hg(s) + find_point_player_hg(s));	
+	return (0);
 }
 
-void			carli_style_bg(t_struct *s, int k)
+int			carli_style_bg(t_struct *s, int k)
 {
 	s->b = verif_rim_h(s);
 	if ((s->w > s->h && !(s->a = verif_rim_d(s))) || (!s->a && s->b))
@@ -77,27 +50,26 @@ void			carli_style_bg(t_struct *s, int k)
 			s->x1 = s->xinit;
 			s->y2 = s->y1;
 			s->x2 = s->x - 1;
+			s->v = 1;
+			return (0);
 	}
-	else if (s->a && s->b && k > 0)
-	{
-		find_point_player_dh(s);
-		find_point_opponent_hd(s);
-	}
+	else if ((s->a && s->b && k > 0) || (s->a && s->blok == 2 && (s->v = 0)))
+		return (find_point_player_dh(s) + find_point_opponent_hd(s));
 	if ((s->h >= s->w && !s->b) || (!s->b && s->a))
 	{
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = 0;
 			s->x2 = s->x1;
+			s->v = 2;
+			return (0);
 	}
-	else if (s->a && s->b && k < 0)
-	{
-		find_point_player_hd(s);
-		find_point_opponent_bg(s);			
-	}
+	else if ((s->a && s->b && k < 0) || (!s->b && s->blok == 1 && (s->v = 0)))
+		return (find_point_player_hd(s), find_point_opponent_bg(s));
+	return (0);
 }
 
-void			carli_style_hg(t_struct *s, int k)
+int			carli_style_hg(t_struct *s, int k)
 {
 	s->b = verif_rim_d(s);
 	if ((s->w > s->h && !(s->a = verif_rim_b(s))) || (!s->a && s->b))
@@ -105,28 +77,27 @@ void			carli_style_hg(t_struct *s, int k)
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = s->y - 1;
-			s->x2 = s->x1;			
+			s->x2 = s->x1;
+			s->v = 1;
+			return (0);
 	}
-	else if (s->a && s->b && k > 0)
-	{
-		find_point_player_db(s);
-		find_point_opponent_bd(s);
-	}
+	else if ((s->a && s->b && k > 0) || (!s->b && s->blok == 2 && (s->v = 0)))
+		return (find_point_player_dh(s) + find_point_opponent_bd(s));
 	if ((s->h >= s->w && !s->b) || (!s->b && s->a))
 	{
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = s->y1;
 			s->x2 = s->x - 1;
+			s->v = 2;
+			return (0);
 	}
-	else if (s->a && s->b && k < 0)
-	{
-		find_point_player_bd(s);
-		find_point_opponent_hg(s);			
-	}
+	else if ((s->a && s->b && k < 0) || (!s->b && s->blok == 1 && (s->v = 0)))
+		return (find_point_player_bd(s) + find_point_opponent_hg(s));
+	return (0);
 }
 
-void			carli_style_hd(t_struct *s, int k)
+int			carli_style_hd(t_struct *s, int k)
 {
 	s->b = verif_rim_b(s);
 	if ((s->w > s->h && !(s->a = verif_rim_g(s))) || (!s->a && s->b))
@@ -134,23 +105,22 @@ void			carli_style_hd(t_struct *s, int k)
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = s->y1;
-			s->x2 = 0;			
+			s->x2 = 0;
+			s->v = 1;
+			return (0);		
 	}
-	else if (s->a && s->b && k > 0)
-	{
-		find_point_player_gb(s);
-		find_point_opponent_bg(s);
-	}
+	else if ((s->a && s->b && k > 0) || (!s->b && s->blok == 2 && (s->v = 0)))
+		return (find_point_player_gb(s) + find_point_opponent_bg(s));
 	if ((s->h >= s->w && !s->b) || (!s->b && s->a))
 	{
 			s->y1 = s->yinit;
 			s->x1 = s->xinit;
 			s->y2 = s->y - 1;
 			s->x2 = s->x1;
+			s->v = 2;
+			return (0);
 	}
-	else if (s->a && s->b && k < 0)
-	{
-		find_point_player_bg(s);
-		find_point_opponent_hd(s);
-	}
+	else if ((s->a && s->b && k < 0) || (!s->b && s->blok == 1 && (s->v = 0)))
+		return (find_point_player_bg(s) + find_point_opponent_hd(s));
+	return (0);
 }

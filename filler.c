@@ -55,32 +55,35 @@ void			determine_carli(t_struct *s, int i, int k)
 		// s->xinit = 14;
 		// s->x2init = 2;
 		// s->y2init = 2;
-	if (s->yinit < s->y / 2)
-	{
-		if (s->xinit < s->x / 2)
-		{
-			fprintf(stderr, "player is HG\n");
-			carli_style_hg(s, k);
-		}
-		else
-		{
-			fprintf(stderr, "player is HD\n");
-			carli_style_hd(s, k);
-		}
-	}
-	else
-	{
-		if (s->xinit < s->x / 2)
-		{
-			fprintf(stderr, "player is BG\n");
-			carli_style_bg(s, k);
-		}
-		else
-		{
-			fprintf(stderr, "player is BD\n");
+
 			carli_style_bd(s, k);		
-		}
-	}
+
+	// if (s->yinit < s->y / 2)
+	// {
+	// 	if (s->xinit < s->x / 2)
+	// 	{
+	// 		fprintf(stderr, "player is HG\n");
+	// 		carli_style_hg(s, k);
+	// 	}
+	// 	else
+	// 	{
+	// 		fprintf(stderr, "player is HD\n");
+	// 		carli_style_hd(s, k);
+	// 	}
+	// }
+	// else
+	// {
+	// 	if (s->xinit < s->x / 2)
+	// 	{
+	// 		fprintf(stderr, "player is BG\n");
+	// 		carli_style_bg(s, k);
+	// 	}
+	// 	else
+	// 	{
+	// 		fprintf(stderr, "player is BD\n");
+	// 		carli_style_bd(s, k);		
+	// 	}
+	// }
 			fprintf(stderr, "\033[94mY1 = %d\n", s->y1);
 	fprintf(stderr, "\033[94mX1 = %d\n", s->x1);
 	fprintf(stderr, "\033[94mY2 = %d\n", s->y2);
@@ -114,8 +117,6 @@ void			make_filler(t_struct *s, int k, int i)
 
 	if (search(s, s->y1, s->x1) == 0)
 	{	
-		fprintf(stderr, "PAS ALLER DANS SEARCH\n");
-
 		if (parcour(s, k) == 0)
 		{
 			s->y1 = 0;
@@ -152,7 +153,7 @@ int				main(void)
 	k = 1;
 	while (42)
 	{
-		 usleep(999991);
+		 // usleep(999991);
 		 // usleep(99999);
 		 // usleep(99991);
 		 // usleep(9999);

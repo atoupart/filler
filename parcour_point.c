@@ -16,9 +16,9 @@ int			parcour(t_struct *s, int k)
 {
 	if (touch_opponent(s))
 	{
-		if (s->ver_blok == 1)
+		if (s->v == 1)
 			s->blok = 1;
-		else if (s->ver_blok == 2)
+		else if (s->v == 2)
 			s->blok = 2;
 		fprintf(stderr, "\033[96mtouch_opponent passed\n");
 		return (1);

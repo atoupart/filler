@@ -12,7 +12,6 @@
 
 #include "filler.h"
 
-
 int				find_point_player_gh(t_struct *s)
 {
 	s->x1 = 0;
@@ -46,6 +45,7 @@ int				find_point_player_gb(t_struct *s)
 	}
 	return (0);
 }
+
 int				find_point_player_dh(t_struct *s)
 {
 	s->x1 = s->x - 1;
@@ -62,10 +62,11 @@ int				find_point_player_dh(t_struct *s)
 	}
 	return (0);
 }
+
 int				find_point_player_db(t_struct *s)
 {
 	s->x1 = s->x - 1;
-	while (s->x1 < s->x)
+	while (s->x1 >= 0)
 	{
 		s->y1 = s->y -1;
 		while (s->y1 >= 0)

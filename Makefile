@@ -25,6 +25,7 @@ FILES	= \
 		find_point_player.c\
 		find_point_player2.c\
 		find_point_opponent.c\
+		find_point_opponent2.c\
 		orientation_piece.c\
 		search.c\
 		parcour_point.c\

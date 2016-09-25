@@ -78,7 +78,7 @@ typedef	struct		s_struct
 	int				a;
 	int				b;
 	int				blok;
-	int				ver_blok;
+	int				v;
 
 }					t_struct;
 
@@ -127,14 +127,23 @@ int					find_point_opponent_bg(t_struct *s);
 int					find_point_opponent_bd(t_struct *s);
 
 /*
+**				find_point_opponent2.c
+*/
+
+int					find_point_opponent_gh(t_struct *s);
+int					find_point_opponent_gb(t_struct *s);
+int					find_point_opponent_dh(t_struct *s);
+int					find_point_opponent_db(t_struct *s);
+
+/*
 **				carli_style.c
 */
 
 
-void				carli_style_bd(t_struct *s, int k);
-void				carli_style_bg(t_struct *s, int k);
-void				carli_style_hd(t_struct *s, int k);
-void				carli_style_hg(t_struct *s, int k);
+int				carli_style_bd(t_struct *s, int k);
+int				carli_style_bg(t_struct *s, int k);
+int				carli_style_hd(t_struct *s, int k);
+int				carli_style_hg(t_struct *s, int k);
 
 /*
 **				color_filler.c
