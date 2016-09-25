@@ -79,9 +79,39 @@ typedef	struct		s_struct
 	int				b;
 	int				blok;
 	int				v;
+	int				position;
 
 }					t_struct;
 
+/*
+**				main.c
+*/
+
+int					main(void);
+
+/*
+**				filler.c
+*/
+
+void				determine_position(t_struct *s);
+void				determine_carli(t_struct *s, int i, int k);
+int					thank_norm(t_struct *s, char *str);
+void				make_filler(t_struct *s, int k, int i);
+
+/*
+**				free_all.c
+*/
+
+void				free_piece(t_struct *s);
+void				free_all(t_struct *s);
+
+/*
+**				ajust_trankil.c
+*/
+
+int					main(void);
+void				trankil(int i);
+void				ajust_array(t_struct *s);
 
 /*
 **				tcheck_piece.c
@@ -139,11 +169,10 @@ int					find_point_opponent_db(t_struct *s);
 **				carli_style.c
 */
 
-
-int				carli_style_bd(t_struct *s, int k);
-int				carli_style_bg(t_struct *s, int k);
-int				carli_style_hd(t_struct *s, int k);
-int				carli_style_hg(t_struct *s, int k);
+int					carli_style_bd(t_struct *s, int k);
+int					carli_style_bg(t_struct *s, int k);
+int					carli_style_hd(t_struct *s, int k);
+int					carli_style_hg(t_struct *s, int k);
 
 /*
 **				color_filler.c
@@ -153,16 +182,6 @@ void				ft_putstr_color(char *str);
 void				init_player_plateau(t_struct *s);
 void				determine_plateau(t_struct *s);
 void				determine_piece(t_struct *s, char *str, char *tmp);
-
-/*
-**				filler.c
-*/
-
-void				free_piece(t_struct *s);
-void				free_all(t_struct *s);
-void				determine_carli(t_struct *s, int i, int k);
-void				make_filler(t_struct *s, int k, int i);
-int					main(void);
 
 /*
 **				init_and_determine.c

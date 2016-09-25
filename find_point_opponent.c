@@ -53,7 +53,7 @@ int				find_point_opponent_hd(t_struct *s)
 	s->y2 = 0;
 	while (s->y2 < s->y)
 	{
-		s->x2 = s->x -1;
+		s->x2 = s->x - 1;
 		while (s->x2 >= 0)
 		{
 			if (s->plateau[s->y2][s->x2] == s->l_opponent ||\

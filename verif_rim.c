@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "filler.h"
 
 int			verif_rim_h(t_struct *s)
@@ -35,6 +34,7 @@ int			verif_rim_b(t_struct *s)
 	int ret;
 
 	i = 0;
+	ret = 0;
 	while (i < s->x)
 	{
 		if (s->plateau[s->y - 1][i] == s->l_player)

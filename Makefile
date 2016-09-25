@@ -32,11 +32,20 @@ FILES	= \
 		tool_parcour_search.c\
 		verif_rim.c\
 		carli_style.c\
-		tcheck_piece.c
+		tcheck_piece.c\
+		free_all.c
 
-COLOR = color_filler.c
-		
-NORMAL = init_and_determine.c
+COLOR = color_filler.c\
+		main.c
+
+NORMAL = init_and_determine.c\
+		main.c
+
+TRANKIL = init_and_determine.c\
+		ajust_trankil.c
+
+COLOR_TRANKIL = color_filler.c\
+				ajust_trankil.c
 
 LIB = ./libft/libft.a
 #LIB	= -L libft -lft
@@ -51,6 +60,14 @@ color:
 	# @make -C libft
 	@gcc -g $(CFLAGS) $(FILES) $(COLOR) $(LIB) -o $(NAME) 
 
+trankil:
+	# @make -C libft
+	@gcc -g $(CFLAGS) $(FILES) $(TRANKIL) $(LIB) -o $(NAME)
+
+color_trankil:
+	# @make -C libft
+	@gcc -g $(CFLAGS) $(FILES) $(COLOR_TRANKIL) $(LIB) -o $(NAME)
+
 clean:
 	# make -C libft clean
 	@$(RM) .obj
@@ -63,7 +80,5 @@ re: fclean all
 
 norme:
 	norminette $(FILES) filler.h
-function:
-	nm -u $(NAME)
 
-.PHONY: all make_libft clean fclean re norme
+.PHONY: all make_libft clean fclean re norme color trankil color_trankil

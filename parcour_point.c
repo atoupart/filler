@@ -20,33 +20,16 @@ int			parcour(t_struct *s, int k)
 			s->blok = 1;
 		else if (s->v == 2)
 			s->blok = 2;
-		fprintf(stderr, "\033[96mtouch_opponent passed\n");
 		return (1);
 	}
-	else if ((s->blok = 1)  == 1 && test_around(s))
-	{
-		fprintf(stderr, "\033[96mtest_around passed\n");
-
+	else if ((s->blok = 1) == 1 && test_around(s))
 		return (1);
-	}
 	else if (k > 0 && parcour_point_hg(s))
-	{
-		fprintf(stderr, "\033[96mtparcour_HG passed\n");
- 
 		return (1);
-	}
 	else if (parcour_point_bd(s))
-	{
-		fprintf(stderr, "\033[96mtparcour_BD passed\n");
-
 		return (1);
-	}
 	else if (parcour_point_hd(s))
-	{
-		fprintf(stderr, "\033[96mtparcour_HD passed\n");
-
 		return (1);
-	}
 	return (0);
 }
 
@@ -118,7 +101,7 @@ int			parcour_point_hd(t_struct *s)
 	return (0);
 }
 
-int				look_around(t_struct *s, int y1, int x1)
+int			look_around(t_struct *s, int y1, int x1)
 {
 	int k;
 

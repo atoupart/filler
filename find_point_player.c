@@ -31,7 +31,7 @@ int				find_point_player_hg(t_struct *s)
 
 int				find_point_player_bg(t_struct *s)
 {
-	s->y1 = s->y -1;
+	s->y1 = s->y - 1;
 	while (s->y1 >= 0)
 	{
 		s->x1 = 0;

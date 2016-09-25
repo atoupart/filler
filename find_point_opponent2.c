@@ -46,7 +46,6 @@ int				find_point_opponent_gb(t_struct *s)
 		s->x2++;
 	}
 	return (0);
-
 }
 
 int				find_point_opponent_dh(t_struct *s)
@@ -65,7 +64,6 @@ int				find_point_opponent_dh(t_struct *s)
 		s->x2--;
 	}
 	return (0);
-
 }
 
 int				find_point_opponent_db(t_struct *s)
@@ -84,5 +82,4 @@ int				find_point_opponent_db(t_struct *s)
 		s->x2--;
 	}
 	return (0);
-
 }

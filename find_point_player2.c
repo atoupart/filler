@@ -34,7 +34,7 @@ int				find_point_player_gb(t_struct *s)
 	s->x1 = 0;
 	while (s->x1 < s->x)
 	{
-		s->y1 = s->y -1;
+		s->y1 = s->y - 1;
 		while (s->y1 >= 0)
 		{
 			if (s->plateau[s->y1][s->x1] == s->l_player)
@@ -68,7 +68,7 @@ int				find_point_player_db(t_struct *s)
 	s->x1 = s->x - 1;
 	while (s->x1 >= 0)
 	{
-		s->y1 = s->y -1;
+		s->y1 = s->y - 1;
 		while (s->y1 >= 0)
 		{
 			if (s->plateau[s->y1][s->x1] == s->l_player)
