@@ -80,7 +80,6 @@ typedef	struct		s_struct
 	int				blok;
 	int				v;
 	int				position;
-
 }					t_struct;
 
 /*
@@ -173,6 +172,15 @@ int					carli_style_bd(t_struct *s, int k);
 int					carli_style_bg(t_struct *s, int k);
 int					carli_style_hd(t_struct *s, int k);
 int					carli_style_hg(t_struct *s, int k);
+
+/*
+**				carli_style.c
+*/
+
+void				determine_y1_x1(t_struct *s, int k, int i);
+int					verif_rim(t_struct *s);
+void				follow_rim(t_struct *s);
+void				determine_rim(t_struct *s);
 
 /*
 **				color_filler.c
